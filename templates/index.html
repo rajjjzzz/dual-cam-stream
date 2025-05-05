@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dual Camera Stream</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .video-feed {
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Live Camera Streams</h1>
+    <div class="video-container">
+        <div>
+            <h2>Raspberry Pi Camera</h2>
+            <img src="{{ url_for('video_feed') }}" class="video-feed" width="640" height="480">
+        </div>
+        <div>
+            <h2>USB Webcam</h2>
+            <img src="{{ url_for('usb_feed') }}" class="video-feed" width="640" height="480">
+        </div>
+    </div>
+</body>
+</html>
